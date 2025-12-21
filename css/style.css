@@ -82,6 +82,28 @@ header h1 {
     background-color: #0056b3;
     color: #ffffff;
 }
+.same-img{
+    text-align: center ;
+    border-radius: 10px;
+    height: 50%;
+    object-fit: cover;
+}
+.big-img{
+    border-radius: 10px;
+    height: 75%;
+    object-fit: cover;
+}
+.view{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#part-5{
+    color: white;
+    background-color: rgb(33, 32, 32);
+    padding: 10px 30px;
+    border-bottom: 1px solid #ddd;
+}
 /* Responsive (Mobile) */
 @media (max-width: 768px) {
     .main-nav {
