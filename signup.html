@@ -129,29 +129,35 @@
             e.preventDefault();
         }
     });
-    document.querySelector('form').addEventListener('submit',
-    function (h){
-        var username = document.getElementById('username').value;
-        var email = document.getElementById('email').value;
-        var password = document.getElementById('password').value;
-        if(username!=="Preeti" ){
+    document.addEventListener('DOMContentLoaded', function() {
+    var form = document.querySelector('form'); // or use ID: document.getElementById('signup-form')
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // stop default submission
+
+        var username = document.getElementById('username').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var password = document.getElementById('password').value.trim();
+
+        if(username!=="Rikesh") {
             alert("Username should be your name only");
-            h.preventDefault();
             return;
         }
-        if(email!=="preetyshrestha934@gmail.com" ){
+
+        if(email!=="rikeshgurung35@gmail.com") {
             alert("Email should be your personal email only DUMBOOO!!!");
-            h.preventDefault();
             return;
         }
-        if(password!=="iloveyou" ){
-            alert("Password should be the three magical words that you say to ME");
-            h.preventDefault();
+
+        if(password!=="Sushimata") {
+            alert("Password should be the name called Sushimata only");
             return;
         }
-        alert("Registration Successful! Welcome aboard, Preeti! I Love you Very much");
-        window.location.href="index.html";
+
+        alert("Registration Successful! Welcome aboard, " + username + "!");
+        window.location.href = "https://www.facebook.com/riku.gurung.7"; // redirect to Facebook profile
     });
+});
     if(window.location.pathname==="signup.html"){
         document.getElementById("signup").style.display="none";
     }
